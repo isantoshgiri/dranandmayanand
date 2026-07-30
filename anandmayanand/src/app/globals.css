@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 250 246 238; /* cream-50 */
+  --fg: 27 23 16; /* ink-900 */
+  --surface: 255 255 255;
+  --surface-glass: 255 255 255;
+  --border-soft: 27 23 16;
+}
+
+.dark {
+  --bg: 8 12 24; /* navy-950 */
+  --fg: 250 246 238; /* cream-50 */
+  --surface: 19 27 51; /* navy-800 */
+  --surface-glass: 11 17 32;
+  --border-soft: 232 199 102; /* gold-300 */
+}
+
+@layer base {
+  * {
+    @apply border-ink-900/10 dark:border-gold-300/10;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: rgb(var(--bg));
+    color: rgb(var(--fg));
+    @apply font-body antialiased transition-colors duration-300;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Glassmorphism surface used by navbar, cards, mega-menu */
+  .glass {
+    @apply backdrop-blur-xl border border-white/10 dark:border-gold-300/10;
+    background: rgba(var(--surface-glass), 0.55);
+  }
+
+  .glass-card {
+    @apply glass rounded-4xl shadow-card;
+  }
+
+  /* Eyebrow label used above section headings */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-data font-semibold tracking-[0.28em] uppercase text-saffron-500 dark:text-gold-300;
+  }
+
+  /* Thin gold divider rule */
+  .rule-gold {
+    @apply h-px w-16 bg-gradient-to-r from-gold-500 to-transparent;
+  }
+
+  .section {
+    @apply py-24 md:py-32;
+  }
+
+  .container-px {
+    @apply px-6 md:px-10 lg:px-16;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
