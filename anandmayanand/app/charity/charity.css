@@ -1,0 +1,361 @@
+
+.charity-page {
+  width: 100%;
+  overflow: hidden;
+  background: #F8F2E9;
+  color: #29231F;
+}
+
+.charity-hero {
+  min-height: 590px;
+  padding: 100px 8%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 85% 50%, rgba(229,138,66,.2), transparent 32%),
+    linear-gradient(115deg, #29231F, #63331F 55%, #873C1D);
+}
+
+.charity-hero-content {
+  max-width: 850px;
+  position: relative;
+  z-index: 2;
+}
+
+.charity-eyebrow {
+  color: #B95724;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin: 0 0 22px;
+}
+
+.charity-hero .charity-eyebrow {
+  color: #F2B477;
+}
+
+.charity-hero h1 {
+  color: #FFF9F2;
+  font-size: clamp(48px, 7vw, 86px);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -3px;
+  margin: 0 0 25px;
+}
+
+.charity-title-line {
+  width: 75px;
+  height: 3px;
+  background: #E58A42;
+  margin-bottom: 25px;
+}
+
+.charity-hero-content > p:last-child {
+  color: #E9D9CB;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 580px;
+}
+
+.charity-hero-symbol {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(242,180,119,.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(242,180,119,.35);
+}
+
+.charity-hero-symbol svg {
+  width: 150px;
+  height: 150px;
+  stroke-width: .7;
+}
+
+.charity-intro {
+  max-width: 1400px;
+  margin: auto;
+  padding: 110px 8%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.charity-intro-art {
+  min-height: 320px;
+  background: #F2E9DE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.charity-art-circle {
+  width: 190px;
+  height: 190px;
+  border: 1px solid #D8B99E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B95724;
+}
+
+.charity-art-circle svg {
+  width: 95px;
+  height: 95px;
+  stroke-width: .8;
+}
+
+.charity-intro-art span {
+  font-size: 10px;
+  color: #8B6B55;
+  letter-spacing: 2px;
+}
+
+.charity-intro-content h2,
+.charity-section-heading h2,
+.charity-belief h2,
+.charity-cta h2 {
+  font-size: clamp(34px, 4vw, 51px);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  margin: 0 0 25px;
+}
+
+.charity-intro-content > p:not(.charity-eyebrow) {
+  color: #71665D;
+  font-size: 15px;
+  line-height: 1.95;
+  margin: 0 0 18px;
+}
+
+.charity-initiatives {
+  padding: 110px 8%;
+  background: #F2E9DE;
+}
+
+.charity-section-heading {
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto 55px;
+}
+
+.charity-section-heading > p:last-child {
+  color: #71665D;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.charity-card-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.charity-card {
+  min-height: 280px;
+  padding: 35px 28px;
+  box-sizing: border-box;
+  background: #FFFCF8;
+  border: 1px solid #E9DCCE;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.charity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(70,45,27,.08);
+}
+
+.charity-number {
+  display: block;
+  color: #B95724;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.charity-card-icon {
+  color: #B95724;
+  margin-bottom: 22px;
+}
+
+.charity-card h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 13px;
+}
+
+.charity-card p {
+  color: #71665D;
+  font-size: 13px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.charity-belief {
+  padding: 110px 8%;
+  background: #29231F;
+  text-align: center;
+}
+
+.charity-belief-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.charity-belief .charity-eyebrow {
+  color: #E58A42;
+}
+
+.charity-belief h2 {
+  color: #FFF9F2;
+}
+
+.charity-belief-content > p:last-child {
+  color: #CFC0B4;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.charity-cta {
+  padding: 110px 8%;
+  background: #873C1D;
+  text-align: center;
+  color: #FFF9F2;
+}
+
+.charity-cta .charity-eyebrow {
+  color: #F2B477;
+}
+
+.charity-cta h2 {
+  color: #FFF9F2;
+  max-width: 750px;
+  margin: auto auto 20px;
+}
+
+.charity-cta > p:not(.charity-eyebrow) {
+  max-width: 620px;
+  margin: auto;
+  color: #E9D9CB;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.charity-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  padding: 16px 24px;
+  background: #F8F2E9;
+  color: #873C1D;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.charity-cta-button:hover {
+  background: #F2B477;
+}
+
+.charity-bottom {
+  padding: 30px 8%;
+  text-align: center;
+}
+
+.charity-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #873C1D;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .charity-hero-symbol {
+    right: -90px;
+    opacity: .5;
+  }
+
+  .charity-intro {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+  }
+
+  .charity-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .charity-hero {
+    min-height: 510px;
+    padding: 85px 7%;
+  }
+
+  .charity-hero h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .charity-hero-content > p:last-child {
+    font-size: 15px;
+  }
+
+  .charity-hero-symbol {
+    width: 200px;
+    height: 200px;
+    right: -100px;
+    top: 75%;
+  }
+
+  .charity-intro {
+    padding: 70px 7%;
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .charity-intro-art {
+    min-height: 260px;
+  }
+
+  .charity-initiatives,
+  .charity-belief,
+  .charity-cta {
+    padding: 75px 7%;
+  }
+
+  .charity-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charity-card {
+    min-height: auto;
+    padding: 30px;
+  }
+
+  .charity-intro-content h2,
+  .charity-section-heading h2,
+  .charity-belief h2,
+  .charity-cta h2 {
+    font-size: 34px;
+  }
+}

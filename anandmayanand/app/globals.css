@@ -1,0 +1,3151 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =================================
+   DR. SWAMI ANANDMAYANAND
+   MODERN MINIMAL DESIGN SYSTEM
+================================= */
+
+
+
+:root {
+  /* Primary Bhagwa Palette */
+  --primary: #A84318;
+  --primary-light: #E87932;
+  --primary-dark: #783016;
+
+  /* Backgrounds */
+  --background: #FFF8EF;
+  --surface: #FFFFFF;
+  --surface-soft: #F8EBDD;
+
+  /* Typography */
+  --text: #30231D;
+  --text-secondary: #75665B;
+  --white: #FFFFFF;
+
+  /* Accents */
+  --gold: #D6A04A;
+  --border: rgba(120, 48, 22, 0.13);
+
+  /* Fonts */
+  --font-main: var(--font-manrope), Arial, sans-serif;
+  --container: 1240px;
+}
+
+
+/* English Font */
+body {
+  font-family: var(--font-main);
+}
+
+/* Hindi Font */
+html[lang="hi"] body {
+  font-family: var(--font-anek), Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[lang="hi"] body {
+  font-family: var(--font-anek);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+.site-header {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 86px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+  background: rgba(35, 26, 21, .12);
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-symbol {
+  color: #F0A45F;
+  font-size: 36px;
+  font-family: serif;
+}
+
+.brand-name {
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.brand-name small {
+  display: block;
+  margin-top: 4px;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .11em;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 2vw, 30px);
+  margin-left: auto;
+}
+
+.desktop-nav a {
+  color: rgba(255,255,255,.9);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color .25s ease;
+}
+
+.desktop-nav a:hover {
+  color: #F0A45F;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 50px;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .25s ease;
+}
+
+.language-switch:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.menu-button {
+  display: none;
+  color: white;
+  border: 0;
+  background: transparent;
+}
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero {
+  position: relative;
+  min-height: 720px;
+  height: 100svh;
+  max-height: 1050px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #30231C;
+  color: white;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/guruji-hero.jpg");
+  background-size: cover;
+  background-position: center 38%;
+  transform: scale(1.01);
+  animation: heroReveal 1.2s ease both;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(27, 21, 17, .88) 0%,
+      rgba(27, 21, 17, .76) 32%,
+      rgba(27, 21, 17, .40) 65%,
+      rgba(27, 21, 17, .10) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(27, 21, 17, .45),
+      transparent 45%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 780px;
+  padding: 120px 0 70px 9%;
+}
+
+.eyebrow {
+  margin-bottom: 22px;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .17em;
+  line-height: 1.8;
+}
+
+.hero .eyebrow {
+  color: #F3B276;
+}
+
+.hero h1 {
+  max-width: 750px;
+  margin: 0;
+  color: white;
+  font-family: var(--font-main);
+  font-size: clamp(52px, 6vw, 82px);
+  font-weight: 600;
+  letter-spacing: -.055em;
+  line-height: 1.08;
+}
+
+.hero h1 em {
+  color: #F2A363;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hero-description {
+  max-width: 480px;
+  margin: 26px 0 32px;
+  color: rgba(255,255,255,.82);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 24px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .25s ease;
+}
+
+.primary-button {
+  color: white;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.primary-button:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  color: white;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.65);
+}
+
+.secondary-button:hover {
+  background: rgba(255,255,255,.15);
+}
+
+.scroll-indicator {
+  position: absolute;
+  left: 6%;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: rgba(255,255,255,.75);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.hero-caption {
+  position: absolute;
+  right: 6%;
+  bottom: 32px;
+  color: #F2B477;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+/* =================================
+   COMMON SECTIONS
+================================= */
+
+.section {
+  padding: 110px 8%;
+}
+
+.section-inner {
+  width: 100%;
+  max-width: var(--container);
+  margin: auto;
+}
+
+.section-kicker {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  line-height: 1.8;
+}
+
+.intro-section {
+  display: grid;
+  grid-template-columns: .65fr 1.35fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.intro-section h2,
+.teachings-section h2,
+.contact-section h2 {
+  max-width: 760px;
+  margin: 0 0 25px;
+  font-size: clamp(38px, 4.6vw, 60px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+}
+
+.intro-section > div:last-child > p,
+.hospital-section > div:last-child > p:not(.eyebrow) {
+  max-width: 650px;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  transition: .2s ease;
+}
+
+.text-link:hover {
+  gap: 18px;
+}
+
+/* =================================
+   SPIRITUAL PHILOSOPHY
+================================= */
+
+.aatma-section {
+  padding: 110px 8%;
+  color: white;
+  background: #302720;
+}
+
+.aatma-heading {
+  max-width: 760px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.aatma-heading .eyebrow {
+  color: #F2A363;
+}
+
+.aatma-heading h2 {
+  margin: 12px 0 20px;
+  font-size: clamp(40px, 5vw, 66px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.04em;
+}
+
+.aatma-heading > p:not(.eyebrow) {
+  color: #E8A36C;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.aatma-heading > span {
+  display: block;
+  max-width: 600px;
+  margin: 20px auto 0;
+  color: rgba(255,255,255,.68);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255,255,255,.17);
+  border-bottom: 1px solid rgba(255,255,255,.17);
+}
+
+.pillar-card {
+  min-height: 290px;
+  padding: 35px 25px;
+  position: relative;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.17);
+}
+
+.pillar-card:last-child {
+  border-right: 0;
+}
+
+.pillar-number {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: #E8A36C;
+  font-size: 11px;
+}
+
+.pillar-symbol {
+  margin: 20px 0;
+  color: #F0A363;
+  font-size: 40px;
+  font-family: serif;
+}
+
+.pillar-card > p {
+  color: #E8A36C;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.pillar-card h3 {
+  margin: 12px 0;
+  font-size: 29px;
+  font-weight: 600;
+}
+
+.pillar-description {
+  display: block;
+  max-width: 290px;
+  margin: auto;
+  color: rgba(255,255,255,.68);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =================================
+   TEACHINGS
+================================= */
+
+.teachings-section {
+  background: var(--surface);
+}
+
+.teachings-section h2 {
+  max-width: 700px;
+  margin: 12px 0 55px;
+}
+
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+}
+
+.teaching-card {
+  min-height: 240px;
+  padding: 28px 22px 24px 0;
+  border-right: 1px solid var(--border);
+  transition: background .25s ease;
+}
+
+.teaching-card + .teaching-card {
+  padding-left: 22px;
+}
+
+.teaching-card:last-child {
+  border-right: 0;
+}
+
+.teaching-card > span {
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.teaching-card h3 {
+  margin: 48px 0 14px;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+
+.teaching-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =================================
+   SPIRITUAL JOURNEY
+================================= */
+
+.journey-section {
+  min-height: 510px;
+  padding: 100px 9%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(34, 25, 20, .88),
+      rgba(34, 25, 20, .55)
+    ),
+    url("/images/guruji-hero.jpg") center 40% / cover;
+}
+
+.journey-content {
+  position: relative;
+  max-width: 680px;
+}
+
+.journey-section .eyebrow {
+  color: #F2A363;
+}
+
+.journey-section h2 {
+  margin: 12px 0 25px;
+  font-size: clamp(42px, 5.5vw, 70px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.04em;
+}
+
+.journey-section p:last-child {
+  max-width: 540px;
+  color: rgba(255,255,255,.8);
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* =================================
+   HOSPITAL OF HOPE
+================================= */
+
+.hospital-section {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 65px;
+  align-items: center;
+  background: var(--surface-soft);
+}
+
+.hospital-mark {
+  min-height: 350px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(185,87,36,.18);
+  color: var(--primary);
+  font-size: 100px;
+  background: #F9F2E8;
+}
+
+.hospital-section h2 {
+  margin: 12px 0 25px;
+  font-size: clamp(40px, 4.7vw, 62px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -.04em;
+}
+
+/* =================================
+   CONTACT
+================================= */
+
+.contact-section {
+  padding: 110px 25px;
+  text-align: center;
+  background: var(--surface);
+}
+
+.contact-section h2 {
+  max-width: 750px;
+  margin: 15px auto 20px;
+}
+
+.contact-section > p:not(.eyebrow) {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+.site-footer {
+  padding: 55px 7%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  color: white;
+  background: #29231F;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #F0A363;
+  font-size: 30px;
+}
+
+.footer-brand span {
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.footer-brand small {
+  display: block;
+  margin-top: 5px;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.site-footer > p,
+.site-footer > span {
+  color: rgba(255,255,255,.62);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* =================================
+   MOBILE NAVIGATION
+================================= */
+
+.mobile-menu {
+  display: none;
+}
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes heroReveal {
+  from {
+    transform: scale(1.06);
+    opacity: .6;
+  }
+  to {
+    transform: scale(1.01);
+    opacity: 1;
+  }
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1100px) {
+  .site-header {
+    padding: 0 4%;
+    gap: 15px;
+  }
+
+  .desktop-nav {
+    gap: 12px;
+  }
+
+  .desktop-nav a {
+    font-size: 10px;
+  }
+
+  .intro-section {
+    gap: 40px;
+  }
+
+  .teaching-card h3 {
+    font-size: 20px;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 800px) {
+  .site-header {
+    min-height: 72px;
+    padding: 0 22px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .brand-symbol {
+    font-size: 30px;
+  }
+
+  .brand-name {
+    font-size: 11px;
+  }
+
+  .brand-name small {
+    font-size: 7px;
+  }
+
+  .hero {
+    height: 92svh;
+    min-height: 650px;
+  }
+
+  .hero-background {
+    background-position: 58% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(27,21,17,.86),
+        rgba(27,21,17,.58) 75%,
+        rgba(27,21,17,.3)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(27,21,17,.35),
+        transparent 60%
+      );
+  }
+
+  .hero-content {
+    padding: 100px 25px 80px;
+  }
+
+  .hero h1 {
+    font-size: clamp(45px, 11vw, 68px);
+    letter-spacing: -.045em;
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    max-width: 360px;
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    min-height: 46px;
+    padding: 0 16px;
+    font-size: 10px;
+  }
+
+  .scroll-indicator {
+    left: 24px;
+    bottom: 24px;
+    font-size: 9px;
+  }
+
+  .hero-caption {
+    display: none;
+  }
+
+  .section {
+    padding: 78px 25px;
+  }
+
+  .intro-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .intro-section h2,
+  .teachings-section h2 {
+    font-size: 42px;
+  }
+
+  .aatma-section {
+    padding: 80px 24px;
+  }
+
+  .aatma-heading h2 {
+    font-size: 43px;
+  }
+
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-card {
+    min-height: 255px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.17);
+  }
+
+  .pillar-card:last-child {
+    border-bottom: 0;
+  }
+
+  .teaching-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .teaching-card,
+  .teaching-card + .teaching-card {
+    min-height: 210px;
+    padding: 22px 14px 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .teaching-card:nth-child(2n) {
+    padding-left: 14px;
+    border-right: 0;
+  }
+
+  .teaching-card h3 {
+    margin-top: 38px;
+    font-size: 19px;
+  }
+
+  .journey-section {
+    min-height: 430px;
+    padding: 80px 25px;
+  }
+
+  .journey-section h2 {
+    font-size: 45px;
+  }
+
+  .hospital-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hospital-mark {
+    min-height: 240px;
+  }
+
+  .hospital-section h2 {
+    font-size: 43px;
+  }
+
+  .contact-section {
+    padding: 80px 25px;
+  }
+
+  .contact-section h2 {
+    font-size: 42px;
+  }
+
+  .site-footer {
+    padding: 40px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: flex;
+    padding: 110px 30px 40px;
+    flex-direction: column;
+    gap: 22px;
+    overflow-y: auto;
+    background: #29231F;
+    color: white;
+  }
+
+  .mobile-menu > a {
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .mobile-menu > button {
+    align-self: flex-start;
+    padding: 12px 22px;
+    color: white;
+    border: 1px solid var(--primary-light);
+    border-radius: 4px;
+    background: var(--primary);
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .brand-name {
+    font-size: 10px;
+  }
+
+  .language-switch {
+    min-height: 38px;
+    padding: 0 12px;
+  }
+
+  .hero-buttons {
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 230px;
+  }
+
+  .teaching-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-card,
+  .teaching-card + .teaching-card {
+    min-height: 180px;
+    padding: 20px 0;
+    border-right: 0;
+  }
+
+  .teaching-card h3 {
+    margin-top: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* =================================
+   FINAL DESIGN REFINEMENTS
+================================= */
+
+/* HERO WIDTH & TYPOGRAPHY */
+
+.hero-content {
+  max-width: 1100px;
+  padding-left: 9%;
+}
+
+.hero h1 {
+  max-width: 1050px;
+  font-size: clamp(50px, 5vw, 76px);
+  line-height: 1.14;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.hero h1 em {
+  display: inline;
+  color: #F0A363;
+}
+
+.hero-description {
+  max-width: 540px;
+  font-size: 14px;
+}
+
+/* WARM IVORY SECTION */
+
+.aatma-section {
+  background: #F8F2E9;
+  color: #29231F;
+}
+
+.aatma-heading h2 {
+  color: #29231F;
+}
+
+.aatma-heading > span {
+  color: #71665D;
+}
+
+.aatma-heading .eyebrow,
+.aatma-heading > p:not(.eyebrow) {
+  color: #B95724;
+}
+
+/* WHITE PHILOSOPHY CARDS */
+
+.pillar-grid {
+  border-color: rgba(185, 87, 36, .22);
+}
+
+.pillar-card {
+  background: #FFFFFF;
+  border-color: rgba(185, 87, 36, .20);
+}
+
+.pillar-number,
+.pillar-symbol,
+.pillar-card > p {
+  color: #B95724;
+}
+
+.pillar-card h3 {
+  color: #29231F;
+}
+
+.pillar-description {
+  color: #71665D;
+}
+
+/* ORANGE BRAND DETAILS */
+
+.primary-button {
+  background: #B95724;
+  border-color: #B95724;
+}
+
+.primary-button:hover {
+  background: #873C1D;
+  border-color: #873C1D;
+}
+
+.text-link {
+  color: #B95724;
+  border-color: #B95724;
+}
+
+.section-kicker,
+.eyebrow {
+  color: #B95724;
+}
+
+/* MOBILE HERO */
+
+@media (max-width: 800px) {
+  .hero-content {
+    max-width: 100%;
+    padding: 100px 25px 80px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(42px, 10vw, 60px);
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+}
+
+/* English Typography */
+.english-font {
+  font-family: var(--font-manrope), sans-serif;
+}
+
+/* Hindi Typography */
+.hindi-font {
+  font-family: var(--font-anek), sans-serif;
+}
+
+.hindi-font h1,
+.hindi-font h2,
+.hindi-font h3,
+.hindi-font p,
+.hindi-font a,
+.hindi-font button,
+.hindi-font span {
+  font-family: var(--font-anek), sans-serif;
+}
+
+/* ===== NEW PROFESSIONAL HERO ===== */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(900px, 100svh);
+  min-height: max(700px, 100svh);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 140px 8.5% 110px;
+  background: #2b211b;
+  color: #fff;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-size: cover;
+  background-position: center 35%;
+  transform: scale(1.02);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(35, 24, 17, 0.90) 0%,
+      rgba(35, 24, 17, 0.76) 45%,
+      rgba(35, 24, 17, 0.30) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(35, 24, 17, 0.55),
+      transparent 60%
+    );
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 780px;
+  position: relative;
+  z-index: 3;
+}
+
+.hero .eyebrow {
+  color: #ffad70;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.hero-title {
+  font-family: var(--font-manrope), sans-serif;
+  font-size: clamp(48px, 6.5vw, 88px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -3px;
+  max-width: 780px;
+  margin-bottom: 26px;
+}
+
+.hero-title > span {
+  display: block;
+}
+
+.hero-highlight {
+  color: #f18a45;
+}
+
+.hero-description {
+  max-width: 550px;
+  font-size: 17px;
+  line-height: 1.85;
+  color: rgba(255,255,255,.82);
+  margin-bottom: 34px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-art {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  border: 1px solid rgba(255, 166, 105, .45);
+  border-radius: 20px;
+  color: #ffad70;
+  background: rgba(232, 117, 36, .12);
+  backdrop-filter: blur(8px);
+  animation: spiritualFloat 5s ease-in-out infinite;
+}
+
+.hero-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.5;
+}
+
+.hero-icon-lotus {
+  top: 25%;
+  right: 15%;
+}
+
+.hero-icon-sun {
+  top: 52%;
+  right: 8%;
+  animation-delay: 1s;
+}
+
+.hero-icon-energy {
+  bottom: 20%;
+  right: 22%;
+  animation-delay: 2s;
+}
+
+.hero-icon-orbit {
+  top: 15%;
+  right: 35%;
+  animation-delay: 1.5s;
+}
+
+.hero-om {
+  position: absolute;
+  right: 12%;
+  bottom: 12%;
+  color: rgba(255, 173, 112, .35);
+  font-size: 100px;
+}
+
+@keyframes spiritualFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 780px;
+    min-height: 100svh;
+    padding: 130px 24px 120px;
+    align-items: center;
+  }
+
+  .hero-background {
+    background-position: 58% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(35, 24, 17, .88),
+        rgba(35, 24, 17, .58)
+      ),
+      linear-gradient(
+        0deg,
+        rgba(35, 24, 17, .75),
+        transparent
+      );
+  }
+
+  .hero-title {
+    font-size: clamp(42px, 10vw, 64px);
+    line-height: 1.2;
+    letter-spacing: -1.8px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .hero-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  .hero-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .hero-icon-lotus {
+    top: 13%;
+    right: 8%;
+  }
+
+  .hero-icon-sun {
+    top: 35%;
+    right: 5%;
+  }
+
+  .hero-icon-energy,
+  .hero-icon-orbit,
+  .hero-om {
+    display: none;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 290px;
+    justify-content: center;
+  }
+
+  .hero .eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Official Website Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .brand-logo {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+/* ===== ABOUT GURUJI - FINAL LAYOUT ===== */
+
+.about-guruji-section {
+  width: 100%;
+  padding: 100px 7%;
+  background: #F8F2E9;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.about-guruji-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 400px minmax(0, 1fr);
+  align-items: center;
+  gap: 75px;
+}
+
+/* LEFT IMAGE BOX */
+
+.about-guruji-image {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  background: #E8D9C8;
+}
+
+.about-guruji-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.about-image-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 17px 15px;
+  box-sizing: border-box;
+  background: rgba(41, 35, 31, 0.82);
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* RIGHT CONTENT */
+
+.about-guruji-content {
+  width: 100%;
+  max-width: 570px;
+}
+
+.about-guruji-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 22px;
+  color: #B95724;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-guruji-label span {
+  display: inline-block;
+  width: 35px;
+  height: 2px;
+  background: #B95724;
+  flex-shrink: 0;
+}
+
+.about-guruji-content h2 {
+  margin: 0;
+  color: #29231F;
+  font-size: clamp(34px, 3.5vw, 49px);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+
+.about-guruji-divider {
+  width: 60px;
+  height: 3px;
+  margin: 25px 0;
+  background: #B95724;
+}
+
+.about-guruji-description {
+  margin: 0 0 17px;
+  color: #71665D;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.about-guruji-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 15px 23px;
+  background: #B95724;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.about-guruji-button:hover {
+  background: #873C1D;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .about-guruji-container {
+    grid-template-columns: 330px minmax(0, 1fr);
+    gap: 35px;
+  }
+
+  .about-guruji-image {
+    height: 420px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .about-guruji-section {
+    padding: 65px 7%;
+  }
+
+  .about-guruji-container {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .about-guruji-image {
+    width: 100%;
+    max-width: 420px;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .about-guruji-content {
+    max-width: 100%;
+  }
+
+  .about-guruji-content h2 {
+    font-size: 34px;
+  }
+
+  .about-guruji-description {
+    font-size: 14px;
+  }
+}
+
+/* ===== GURUJI DETAILED BIOGRAPHY ===== */
+
+.guruji-biography {
+  padding: 100px 7%;
+  background: #F2E9DE;
+}
+
+.biography-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.biography-heading {
+  max-width: 720px;
+  margin-bottom: 55px;
+}
+
+.biography-eyebrow {
+  color: #B95724;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 18px;
+}
+
+.biography-heading h2 {
+  color: #29231F;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  margin: 0 0 18px;
+  font-weight: 600;
+}
+
+.biography-heading > p:last-child {
+  color: #71665D;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.biography-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.biography-card {
+  position: relative;
+  padding: 35px;
+  background: #F8F2E9;
+  border: 1px solid rgba(185, 87, 36, 0.13);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.biography-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(41, 35, 31, 0.06);
+}
+
+.biography-wide {
+  grid-column: span 2;
+}
+
+.biography-number {
+  color: #B95724;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.biography-card-label {
+  color: #B95724;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 20px 0 12px;
+}
+
+.biography-card h3 {
+  color: #29231F;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 0 17px;
+}
+
+.biography-card > p:not(.biography-card-label) {
+  color: #71665D;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 14px;
+}
+
+.biography-card ul {
+  padding-left: 20px;
+  margin: 0;
+  color: #71665D;
+}
+
+.biography-card li {
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.biography-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.biography-tags span {
+  padding: 10px 15px;
+  border: 1px solid rgba(185, 87, 36, 0.3);
+  color: #873C1D;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.biography-designation {
+  margin-top: 35px;
+  padding: 35px;
+  background: #29231F;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.biography-designation p {
+  color: #E58A42;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.biography-designation h3 {
+  font-size: 25px;
+  margin: 0;
+}
+
+.biography-designation span {
+  color: #E9DCD0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .guruji-biography {
+    padding: 70px 6%;
+  }
+
+  .biography-heading {
+    margin-bottom: 35px;
+  }
+
+  .biography-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .biography-wide {
+    grid-column: span 1;
+  }
+
+  .biography-card {
+    padding: 25px;
+  }
+
+  .biography-card h3 {
+    font-size: 22px;
+  }
+
+  .biography-designation {
+    padding: 25px;
+  }
+}
+
+/* ABOUT PAGE HEADER FIX */
+
+.inner-header {
+  width: 100%;
+  background: #F8F2E9;
+  border-bottom: 1px solid #E9DCCF;
+  position: relative;
+  z-index: 100;
+}
+
+.inner-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 90px;
+  padding: 12px 7%;
+  box-sizing: border-box;
+}
+
+.inner-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: #29231F;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.inner-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.inner-header nav a {
+  color: #29231F;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.inner-header nav a:hover {
+  color: #B95724;
+}
+
+.inner-donate {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.inner-menu {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #29231F;
+  cursor: pointer;
+}
+
+.inner-menu svg {
+  width: 25px;
+  height: 25px;
+}
+
+.inner-drawer {
+  position: absolute;
+  z-index: 200;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  padding: 30px 7%;
+  box-sizing: border-box;
+  background: #F8F2E9;
+  box-shadow: 0 12px 25px rgba(0,0,0,.12);
+}
+
+.inner-drawer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inner-drawer a {
+  color: #29231F;
+  text-decoration: none;
+}
+
+.inner-drawer > button {
+  display: block;
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .inner-header-content {
+    min-height: 75px;
+  }
+
+  .inner-header nav,
+  .inner-header .inner-donate {
+    display: none;
+  }
+
+  .inner-menu {
+    display: block;
+  }
+
+  .inner-drawer {
+    top: 75px;
+  }
+}
+.site-brand-logo {
+  display: block;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .site-brand-logo {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+.inner-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+}
+
+.inner-language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid #E3D5C8;
+  background: transparent;
+  color: #873C1D;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.inner-language-switch:hover {
+  background: #F2E9DE;
+}
+
+@media (max-width: 900px) {
+  .inner-header-actions {
+    gap: 12px;
+  }
+
+  .inner-header-actions .inner-donate {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .inner-header-content {
+    gap: 10px;
+  }
+
+  .inner-language-switch {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+/* Footer layout fix */
+.site-footer {
+  padding: 55px 7% 25px;
+  background: #29231F;
+  color: #F8F2E9;
+}
+
+.site-footer .footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.site-footer .footer-top > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.site-footer a {
+  color: #F8F2E9;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.site-footer .footer-top > div a:hover {
+  color: #E58A42;
+}
+
+.site-footer .footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-footer .footer-top p,
+.site-footer p {
+  color: #BFB2A7;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 30px;
+}
+
+@media (max-width: 650px) {
+  .site-footer .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer .footer-top > div {
+    gap: 18px;
+  }
+}
+
+/* =================================
+   PREMIUM BILINGUAL TYPOGRAPHY
+================================= */
+
+/* English typography */
+html[lang="en"] body,
+.english-font {
+  font-family: var(--font-manrope), Arial, sans-serif;
+}
+
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3,
+html[lang="en"] h4,
+.english-font h1,
+.english-font h2,
+.english-font h3,
+.english-font h4 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 600;
+}
+
+/* Hindi typography */
+html[lang="hi"] body,
+.hindi-font {
+  font-family: var(--font-hind), sans-serif;
+}
+
+html[lang="hi"] h1,
+html[lang="hi"] h2,
+html[lang="hi"] h3,
+html[lang="hi"] h4,
+.hindi-font h1,
+.hindi-font h2,
+.hindi-font h3,
+.hindi-font h4 {
+  font-family: var(--font-noto-serif), serif;
+  font-weight: 600;
+}
+
+/* Better readability */
+body {
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: normal;
+}
+
+/* =================================
+   BHAGWA PREMIUM DESIGN SYSTEM
+================================= */
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+/* Clean section backgrounds */
+.section,
+.teachings-section,
+.contact-section {
+  background-color: var(--background);
+}
+
+/* Spiritual section */
+.aatma-section {
+  background: #FFF3E3;
+  color: var(--text);
+}
+
+.aatma-heading h2 {
+  color: var(--text);
+}
+
+.aatma-heading > span {
+  color: var(--text-secondary);
+}
+
+.aatma-heading .eyebrow,
+.aatma-heading > p:not(.eyebrow) {
+  color: var(--primary);
+}
+
+/* Cards */
+.pillar-card,
+.biography-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 28px rgba(80, 43, 20, 0.035);
+}
+
+.pillar-card h3,
+.biography-card h3 {
+  color: var(--text);
+}
+
+.pillar-number,
+.pillar-symbol,
+.pillar-card > p,
+.biography-number,
+.biography-card-label {
+  color: var(--primary);
+}
+
+/* Buttons */
+.primary-button,
+.about-guruji-button {
+  background: var(--primary);
+  border-color: var(--primary);
+  border-radius: 3px;
+}
+
+.primary-button:hover,
+.about-guruji-button:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* Section labels and links */
+.section-kicker,
+.eyebrow,
+.text-link,
+.about-guruji-label {
+  color: var(--primary);
+}
+
+.text-link,
+.about-guruji-divider,
+.about-guruji-label span {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+/* Inner page header */
+.inner-header {
+  background: #FFF8EF;
+  border-bottom: 1px solid var(--border);
+}
+
+.inner-header nav a {
+  color: var(--text);
+}
+
+.inner-header nav a:hover {
+  color: var(--primary);
+}
+
+/* Footer */
+.site-footer {
+  background: #30231D;
+  color: #FFF8EF;
+}
+
+/* Smooth and subtle card effects */
+.biography-card,
+.pillar-card,
+.teaching-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.biography-card:hover,
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(80, 43, 20, 0.08);
+}
+
+/* Consistent image corners */
+.about-guruji-image,
+.hospital-mark {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* =================================
+   CLEAN SPIRITUAL HERO REFINEMENT
+================================= */
+
+/* Cleaner hero background */
+.hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(39, 25, 17, 0.88) 0%,
+      rgba(39, 25, 17, 0.70) 45%,
+      rgba(39, 25, 17, 0.25) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(80, 35, 15, 0.45),
+      transparent 65%
+    );
+}
+
+/* Remove unnecessary floating decorations */
+.hero-art {
+  display: none;
+}
+
+/* Better heading readability */
+.hero-title {
+  max-width: 800px;
+  line-height: 1.16;
+  letter-spacing: -1.5px;
+}
+
+/* Premium Bhagwa highlight */
+.hero-highlight {
+  color: #F0A05A;
+}
+
+/* Refined buttons */
+.primary-button {
+  background: #A84318;
+  border: 1px solid #A84318;
+  border-radius: 4px;
+}
+
+.primary-button:hover {
+  background: #783016;
+}
+
+/* Better secondary button */
+.secondary-button {
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+}
+
+/* =================================
+   PREMIUM HEADER DESIGN
+================================= */
+
+.site-header {
+  min-height: 94px;
+  padding: 0 5%;
+  gap: 24px;
+  background: rgba(43, 29, 21, 0.72);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.brand-logo {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+}
+
+.desktop-nav {
+  gap: clamp(12px, 1.45vw, 23px);
+}
+
+.desktop-nav a {
+  font-size: 12px;
+  letter-spacing: 0.1px;
+}
+
+.header-actions {
+  gap: 12px;
+}
+
+.header-donate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 0 18px;
+  color: #fff;
+  background: #A84318;
+  border: 1px solid #A84318;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: 0.25s ease;
+}
+
+.header-donate:hover {
+  background: #783016;
+  border-color: #783016;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1100px) {
+  .site-header {
+    padding: 0 3%;
+    gap: 12px;
+  }
+
+  .desktop-nav {
+    gap: 10px;
+  }
+
+  .desktop-nav a {
+    font-size: 10px;
+  }
+
+  .brand-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .header-donate {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    min-height: 76px;
+    padding: 0 20px;
+  }
+
+  .brand-logo {
+    width: 68px;
+    height: 68px;
+  }
+
+  .desktop-nav,
+  .header-donate {
+    display: none;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+}
+
+/* =================================
+   WHITE STICKY HEADER
+================================= */
+
+.site-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 88px;
+  padding: 0 5%;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #FFFFFF !important;
+  color: #30231D;
+  border-bottom: 1px solid rgba(168, 67, 24, 0.12);
+  box-shadow: 0 3px 18px rgba(48, 35, 29, 0.06);
+
+  backdrop-filter: none;
+}
+
+/* Logo */
+.site-header .brand-logo {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+/* Navigation */
+.site-header .desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-header .desktop-nav a {
+  color: #30231D !important;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 11px 13px;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+/* Orange hover box */
+.site-header .desktop-nav a:hover,
+.site-header .desktop-nav a:focus-visible {
+  color: #FFFFFF !important;
+  background: #A84318;
+  outline: none;
+}
+
+/* Header actions */
+.site-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Language button */
+.site-header .language-switch {
+  color: #30231D;
+  border: 1px solid #D6C4B5;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.site-header .language-switch:hover {
+  color: #FFFFFF;
+  background: #A84318;
+  border-color: #A84318;
+}
+
+/* Donate button */
+.site-header .header-donate {
+  color: #FFFFFF;
+  background: #A84318;
+  border: 1px solid #A84318;
+  border-radius: 4px;
+}
+
+.site-header .header-donate:hover {
+  background: #783016;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .site-header {
+    min-height: 76px;
+    padding: 0 20px;
+  }
+
+  .site-header .brand-logo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .site-header .desktop-nav,
+  .site-header .header-donate {
+    display: none;
+  }
+
+  .site-header .menu-button {
+    color: #30231D;
+  }
+}
+
+/* =================================
+   TWO COLUMN SPIRITUAL HERO
+================================= */
+
+.hero.hero-split {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 760px;
+  height: auto;
+  max-height: none;
+  padding: 125px 7% 75px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--text);
+  background: #FFF8EF;
+}
+
+/* Remove old background image and overlay */
+.hero-split .hero-background,
+.hero-split .hero-overlay,
+.hero-split .hero-art {
+  display: none !important;
+}
+
+/* Main layout */
+.hero-split-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+/* Left content */
+.hero-split .hero-content {
+  width: 100%;
+  max-width: 650px;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-split .eyebrow {
+  color: #A84318;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 24px;
+}
+
+.hero-split .hero-title {
+  color: #30231D;
+  max-width: 650px;
+  font-size: clamp(46px, 5vw, 70px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.hero-split .hero-title span {
+  display: block;
+}
+
+.hero-split .hero-highlight {
+  color: #B95724;
+}
+
+.hero-split .hero-description {
+  max-width: 520px;
+  color: #75665B;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+/* Buttons */
+.hero-split .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-split .primary-button {
+  background: #A84318;
+  border-color: #A84318;
+  color: #FFFFFF;
+}
+
+.hero-split .secondary-button {
+  color: #A84318;
+  background: transparent;
+  border: 1px solid #A84318;
+}
+
+.hero-split .secondary-button:hover {
+  background: #A84318;
+  color: #FFFFFF;
+}
+
+/* Image column */
+.hero-image-column {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+}
+
+/* Image frame */
+.hero-image-frame {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #EBD8C4;
+  border: 7px solid #FFFFFF;
+  box-shadow: 0 20px 55px rgba(70, 40, 20, 0.14);
+}
+
+.hero-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+/* Image caption */
+.hero-image-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 35px 25px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #FFFFFF;
+  background: linear-gradient(
+    transparent,
+    rgba(35, 23, 16, 0.78)
+  );
+}
+
+.hero-image-caption span {
+  color: #F2B477;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-image-caption strong {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Om decoration */
+.hero-image-decoration {
+  position: absolute;
+  right: -30px;
+  top: -35px;
+  z-index: -1;
+  color: rgba(168, 67, 24, 0.12);
+  font-size: 110px;
+}
+
+/* Bottom note */
+.hero-bottom-note {
+  margin-top: 65px;
+  color: #A84318;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* Scroll indicator */
+.hero-split .scroll-indicator {
+  color: #75665B;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+  .hero.hero-split {
+    padding: 120px 5% 75px;
+  }
+
+  .hero-split-container {
+    gap: 35px;
+    grid-template-columns: 1fr 0.85fr;
+  }
+
+  .hero-image-frame {
+    height: 470px;
+  }
+
+  .hero-split .hero-title {
+    font-size: clamp(40px, 5vw, 55px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .hero.hero-split {
+    min-height: auto;
+    padding: 120px 22px 85px;
+  }
+
+  .hero-split-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .hero-split .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-split .hero-title {
+    font-size: clamp(42px, 10vw, 56px);
+    letter-spacing: -1px;
+  }
+
+  .hero-split .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-split .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-split .hero-buttons a {
+    width: 100%;
+    max-width: 290px;
+    justify-content: center;
+  }
+
+  .hero-image-column {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-image-frame {
+    height: 480px;
+    max-height: 115vw;
+  }
+
+  .hero-image-decoration {
+    right: -10px;
+    font-size: 75px;
+  }
+
+  .hero-bottom-note {
+    margin-top: 40px;
+  }
+
+  .hero-split .scroll-indicator {
+    display: none;
+  }
+}
+
+/* =================================
+   GURUJI IMAGE HOVER ANIMATION
+================================= */
+
+.hero-image-frame {
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.hero-portrait {
+  transition: transform 0.7s ease;
+}
+
+/* Mouse hover effect */
+.hero-image-frame:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 65px rgba(70, 40, 20, 0.22);
+}
+
+.hero-image-frame:hover .hero-portrait {
+  transform: scale(1.07);
+}
+
+/* Smooth caption effect */
+.hero-image-caption {
+  transition: padding 0.4s ease;
+}
+
+.hero-image-frame:hover .hero-image-caption {
+  padding-bottom: 30px;
+}
+
+/* Mobile devices: no hover animation */
+@media (hover: none) {
+  .hero-image-frame:hover {
+    transform: none;
+  }
+
+  .hero-image-frame:hover .hero-portrait {
+    transform: none;
+  }
+}
+
+/* =========================================
+   PREMIUM BIOGRAPHY SECTION REDESIGN
+========================================= */
+
+.guruji-biography {
+  padding: 110px 6%;
+  background: #FFF8EF;
+}
+
+.biography-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.biography-heading {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.biography-heading .biography-eyebrow {
+  color: #A84318;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 18px;
+}
+
+.biography-heading h2 {
+  color: #30231D;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.biography-heading > p:last-child {
+  color: #75665B;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.biography-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.biography-card {
+  position: relative;
+  padding: 36px;
+  background: #FFFFFF;
+  border: 1px solid rgba(168, 67, 24, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(70, 40, 20, 0.035);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.biography-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 38px rgba(70, 40, 20, 0.09);
+}
+
+.biography-card.biography-wide {
+  grid-column: 1 / -1;
+}
+
+.biography-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  background: #FFF0E2;
+  color: #A84318;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.biography-card-label {
+  color: #A84318;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.biography-card h3 {
+  color: #30231D;
+  font-size: 25px;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.biography-card > p:not(.biography-card-label) {
+  color: #75665B;
+  font-size: 14px;
+  line-height: 1.95;
+  margin-bottom: 12px;
+}
+
+.biography-card ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.biography-card li {
+  color: #75665B;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 9px;
+}
+
+.biography-languages {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #F0E3D8;
+  color: #A84318 !important;
+  font-weight: 600;
+}
+
+.biography-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.biography-tags span {
+  padding: 9px 15px;
+  border-radius: 30px;
+  color: #8C3B1C;
+  background: #FFF1E5;
+  border: 1px solid #F1D7C3;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.biography-designation {
+  margin-top: 28px;
+  padding: 35px;
+  text-align: center;
+  background: #F5E7D8;
+  border-radius: 8px;
+  border: 1px solid #EBD5C0;
+}
+
+.biography-designation > p {
+  color: #A84318;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.biography-designation h3 {
+  color: #30231D;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.biography-designation span {
+  display: block;
+  color: #75665B;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .guruji-biography {
+    padding: 75px 20px;
+  }
+
+  .biography-heading {
+    margin-bottom: 35px;
+  }
+
+  .biography-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .biography-card.biography-wide {
+    grid-column: auto;
+  }
+
+  .biography-card {
+    padding: 26px 23px;
+  }
+
+  .biography-card h3 {
+    font-size: 22px;
+  }
+
+  .biography-designation {
+    padding: 27px 20px;
+  }
+}
+
+/* =========================================
+   VIDEOS & SPIRITUAL MOMENTS
+========================================= */
+
+.media-showcase {
+  padding: 100px 6%;
+  background: #FFFFFF;
+}
+
+.media-showcase-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.media-showcase-heading {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.media-eyebrow {
+  color: #A84318;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 18px;
+}
+
+.media-showcase-heading h2 {
+  color: #30231D;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.media-showcase-heading > p:last-child {
+  color: #75665B;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.media-category-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.media-category-heading h3 {
+  color: #30231D;
+  font-size: 24px;
+}
+
+.media-category-heading span {
+  color: #A84318;
+  font-size: 12px;
+}
+
+/* YouTube */
+.youtube-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.youtube-video-card {
+  overflow: hidden;
+  padding: 7px;
+  background: #FFFFFF;
+  border: 1px solid #EADCCF;
+  border-radius: 9px;
+  box-shadow: 0 8px 25px rgba(70, 40, 20, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.youtube-video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 32px rgba(70, 40, 20, 0.12);
+}
+
+.youtube-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.youtube-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Instagram */
+.instagram-heading {
+  margin-top: 75px;
+}
+
+.instagram-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.instagram-video-card {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 7px;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid #EADCCF;
+  border-radius: 9px;
+  box-shadow: 0 8px 25px rgba(70, 40, 20, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.instagram-video-card:hover {
+  transform: translateY(-5px);
+}
+
+.instagram-video-card iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
+  border-radius: 5px;
+  background: #F8F0E8;
+}
+
+/* Social links */
+.media-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+.media-social-links a {
+  display: inline-flex;
+  padding: 13px 22px;
+  color: #A84318;
+  border: 1px solid #A84318;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.media-social-links a:hover {
+  background: #A84318;
+  color: #FFFFFF;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .youtube-video-grid,
+  .instagram-video-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .media-showcase {
+    padding: 75px 18px;
+  }
+
+  .youtube-video-grid,
+  .instagram-video-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .youtube-video-card {
+    max-width: 100%;
+  }
+
+  .instagram-video-card {
+    max-width: 350px;
+  }
+
+  .instagram-video-card iframe {
+    height: 470px;
+  }
+
+  .media-category-heading {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .instagram-heading {
+    margin-top: 50px;
+  }
+
+  .media-social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}

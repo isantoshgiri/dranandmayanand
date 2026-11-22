@@ -1,0 +1,396 @@
+
+/* ABOUT PAGE */
+.guruji-about-page {
+  width: 100%;
+  overflow: hidden;
+  background: #F8F2E9;
+  color: #29231F;
+  font-family: var(--font-manrope), Arial, sans-serif;
+}
+
+/* HERO */
+.about-page-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 440px;
+  padding: 80px 7%;
+  box-sizing: border-box;
+  background: linear-gradient(110deg, #29231F 0%, #56301F 55%, #873C1D 100%);
+  color: #fff;
+}
+
+.about-page-hero-inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.about-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 55px;
+  color: #F2D8C3;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color .25s ease;
+}
+
+.about-back-link:hover {
+  color: #fff;
+}
+
+.about-page-eyebrow {
+  margin: 0 0 18px;
+  color: #B95724;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  line-height: 1.6;
+}
+
+.about-page-hero .about-page-eyebrow {
+  color: #F2B77F;
+}
+
+.about-page-hero h1 {
+  max-width: 850px;
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: clamp(38px, 5.5vw, 66px);
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -2px;
+}
+
+.about-page-hero h1 em {
+  color: #F2B77F;
+  font-style: normal;
+}
+
+.about-page-hero-inner > p:last-child {
+  max-width: 600px;
+  margin: 0;
+  color: #E8D9CC;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* INTRODUCTION */
+.about-page-introduction {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 75px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 100px 30px;
+  box-sizing: border-box;
+}
+
+.about-page-photo {
+  position: relative;
+  width: 100%;
+  height: 510px;
+  overflow: hidden;
+  background: #E8D9C8;
+}
+
+.about-page-photo img {
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.about-page-intro-content {
+  max-width: 540px;
+}
+
+.about-page-intro-content h2,
+.about-story-heading h2,
+.about-page-experience h2,
+.about-page-education h2,
+.about-page-cta h2 {
+  margin: 0 0 24px;
+  color: #29231F;
+  font-size: clamp(30px, 3.5vw, 44px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -1.2px;
+}
+
+.about-page-intro-content > p:not(.about-page-eyebrow),
+.about-page-experience p:not(.about-page-eyebrow),
+.about-page-education > p:not(.about-page-eyebrow) {
+  margin: 0 0 18px;
+  color: #71665D;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+/* STORY CARDS */
+.about-page-story {
+  padding: 95px 7%;
+  background: #F2E9DE;
+}
+
+.about-story-heading {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.about-story-heading h2 {
+  margin-bottom: 0;
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.about-story-card {
+  position: relative;
+  min-height: 260px;
+  padding: 35px;
+  box-sizing: border-box;
+  background: #FFFCF8;
+  border: 1px solid #E9DCCF;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.about-story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(75, 47, 29, .08);
+}
+
+.about-story-card > span {
+  display: block;
+  margin-bottom: 20px;
+  color: #B95724;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-story-card > svg {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 15px;
+  color: #B95724;
+  stroke-width: 1.5;
+}
+
+.about-story-card h3 {
+  margin: 0 0 14px;
+  color: #29231F;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.about-story-card p {
+  margin: 0;
+  color: #71665D;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* SPIRITUAL EXPERIENCE */
+.about-page-experience {
+  padding: 100px 7%;
+  background: #29231F;
+}
+
+.about-page-experience > div {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-page-experience h2 {
+  color: #fff;
+}
+
+.about-page-experience p:not(.about-page-eyebrow) {
+  color: #D7C9BD;
+}
+
+/* EDUCATION AND DESIGNATIONS */
+.about-page-education {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.about-page-education h2 {
+  margin-bottom: 18px;
+}
+
+.about-language-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 35px 0 50px;
+}
+
+.about-language-list span {
+  padding: 12px 22px;
+  background: #F2E9DE;
+  border: 1px solid #E7D7C8;
+  color: #873C1D;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.about-designation-box {
+  padding: 38px;
+  background: #F2E9DE;
+  border-left: 4px solid #B95724;
+  text-align: left;
+}
+
+.about-designation-box h3 {
+  margin: 0 0 15px;
+  color: #29231F;
+  font-size: 22px;
+}
+
+.about-designation-box p {
+  margin: 10px 0 0;
+  color: #71665D;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* CALL TO ACTION */
+.about-page-cta {
+  padding: 85px 7%;
+  background: #873C1D;
+  text-align: center;
+}
+
+.about-page-cta .about-page-eyebrow {
+  color: #F2C49E;
+}
+
+.about-page-cta h2 {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #fff;
+}
+
+.about-home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 25px;
+  background: #F8F2E9;
+  color: #873C1D;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background .25s ease;
+}
+
+.about-home-button:hover {
+  background: #fff;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .about-page-introduction {
+    gap: 35px;
+    padding: 75px 25px;
+  }
+
+  .about-page-photo {
+    height: 430px;
+  }
+
+  .about-page-story {
+    padding: 75px 5%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+  .about-page-hero {
+    min-height: 390px;
+    padding: 55px 7%;
+  }
+
+  .about-back-link {
+    margin-bottom: 45px;
+  }
+
+  .about-page-hero h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .about-page-hero-inner > p:last-child {
+    font-size: 14px;
+  }
+
+  .about-page-introduction {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 65px 7%;
+  }
+
+  .about-page-photo {
+    height: 400px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .about-page-intro-content h2,
+  .about-story-heading h2,
+  .about-page-experience h2,
+  .about-page-education h2,
+  .about-page-cta h2 {
+    font-size: 32px;
+  }
+
+  .about-page-story {
+    padding: 65px 7%;
+  }
+
+  .about-story-heading {
+    margin-bottom: 35px;
+  }
+
+  .about-story-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-story-card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .about-page-experience {
+    padding: 70px 7%;
+  }
+
+  .about-page-education {
+    padding: 70px 7%;
+  }
+
+  .about-designation-box {
+    padding: 25px;
+  }
+
+  .about-page-cta {
+    padding: 70px 7%;
+  }
+}

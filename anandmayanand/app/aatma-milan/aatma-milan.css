@@ -1,0 +1,364 @@
+
+.aatma-page {
+  width: 100%;
+  overflow: hidden;
+  background: #F8F2E9;
+  color: #29231F;
+}
+
+.aatma-hero {
+  min-height: 590px;
+  padding: 100px 8%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 50%, rgba(229,138,66,.20), transparent 32%),
+    linear-gradient(115deg, #29231F 0%, #63331F 55%, #873C1D 100%);
+}
+
+.aatma-hero-content {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.aatma-eyebrow {
+  color: #B95724;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+
+.aatma-hero .aatma-eyebrow {
+  color: #F2B477;
+}
+
+.aatma-hero h1 {
+  color: #FFF9F2;
+  font-size: clamp(58px, 8vw, 104px);
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -4px;
+  margin: 0 0 25px;
+}
+
+.aatma-title-line {
+  width: 75px;
+  height: 3px;
+  background: #E58A42;
+  margin-bottom: 25px;
+}
+
+.aatma-hero-subtitle {
+  color: #E9D9CB;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 580px;
+}
+
+.aatma-hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 28px;
+  color: #F2B477;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.aatma-hero-symbol {
+  position: absolute;
+  right: 9%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgba(242,180,119,.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(242,180,119,.20);
+}
+
+.aatma-hero-symbol svg {
+  width: 220px;
+  height: 220px;
+  stroke-width: .65;
+}
+
+.aatma-intro {
+  padding: 115px 8%;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 100px;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.aatma-intro-symbol {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background: #F2E9DE;
+}
+
+.aatma-symbol-circle {
+  width: 190px;
+  height: 190px;
+  border: 1px solid #D8B99E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B95724;
+}
+
+.aatma-symbol-circle svg {
+  width: 105px;
+  height: 105px;
+  stroke-width: .8;
+}
+
+.aatma-intro-symbol span {
+  font-size: 10px;
+  color: #8B6B55;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.aatma-intro-content h2,
+.aatma-section-heading h2,
+.aatma-guidance h2 {
+  font-size: clamp(34px, 4vw, 51px);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  margin: 0 0 25px;
+}
+
+.aatma-intro-content > p:not(.aatma-eyebrow) {
+  color: #71665D;
+  font-size: 15px;
+  line-height: 1.95;
+  margin: 0 0 18px;
+}
+
+.aatma-path {
+  padding: 110px 8%;
+  background: #F2E9DE;
+}
+
+.aatma-section-heading {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.aatma-section-heading > p:last-child {
+  color: #71665D;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.aatma-steps {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.aatma-step-card {
+  background: #FFFCF8;
+  border: 1px solid #E9DCCE;
+  padding: 35px 28px;
+  min-height: 270px;
+  box-sizing: border-box;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.aatma-step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(70, 45, 27, .08);
+}
+
+.aatma-step-number {
+  display: block;
+  color: #B95724;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.aatma-step-icon {
+  color: #B95724;
+  margin-bottom: 22px;
+}
+
+.aatma-step-card h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 13px;
+}
+
+.aatma-step-card p {
+  color: #71665D;
+  font-size: 13px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.aatma-guidance {
+  padding: 110px 8%;
+  background: #29231F;
+  text-align: center;
+}
+
+.aatma-guidance-content {
+  max-width: 760px;
+  margin: auto;
+}
+
+.aatma-guidance .aatma-eyebrow {
+  color: #E58A42;
+}
+
+.aatma-guidance h2 {
+  color: #FFF9F2;
+}
+
+.aatma-guidance-content > p:not(.aatma-eyebrow) {
+  color: #CFC0B4;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.aatma-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 25px;
+  padding: 16px 24px;
+  background: #E58A42;
+  color: #29231F;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background .3s ease;
+}
+
+.aatma-cta-button:hover {
+  background: #F2B477;
+}
+
+.aatma-bottom {
+  padding: 30px 8%;
+  text-align: center;
+}
+
+.aatma-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #873C1D;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.aatma-home-link svg {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 900px) {
+  .aatma-hero-symbol {
+    right: -100px;
+    opacity: .6;
+  }
+
+  .aatma-intro {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+  }
+
+  .aatma-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .aatma-hero {
+    min-height: 510px;
+    padding: 85px 7%;
+  }
+
+  .aatma-hero h1 {
+    font-size: 58px;
+    letter-spacing: -2px;
+  }
+
+  .aatma-hero-subtitle {
+    font-size: 15px;
+  }
+
+  .aatma-hero-symbol {
+    width: 220px;
+    height: 220px;
+    right: -115px;
+    top: 72%;
+  }
+
+  .aatma-hero-symbol svg {
+    width: 145px;
+    height: 145px;
+  }
+
+  .aatma-intro {
+    padding: 70px 7%;
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .aatma-intro-symbol {
+    min-height: 260px;
+  }
+
+  .aatma-path {
+    padding: 75px 7%;
+  }
+
+  .aatma-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .aatma-step-card {
+    min-height: auto;
+    padding: 30px;
+  }
+
+  .aatma-guidance {
+    padding: 75px 7%;
+  }
+
+  .aatma-intro-content h2,
+  .aatma-section-heading h2,
+  .aatma-guidance h2 {
+    font-size: 34px;
+  }
+}
